@@ -34,7 +34,7 @@ export default {
   }
   ,
   mounted() {
-    chrome.storage.sync.get('listOfGroup', (data) => {
+    chrome.storage.local.get('listOfGroup', (data) => {
       if (Array.isArray(data.listOfGroup))
         this.listOfGroup = data.listOfGroup;
     })
@@ -58,7 +58,7 @@ export default {
     saveTabs() {
       chrome.tabs.query({}, (res) => {
         console.log(res);
-        var group = {
+        let group = {
           name: '新的群组',
           list: []
         }
@@ -89,7 +89,7 @@ export default {
       window.open(href);
     },
     updateStorage() {
-      chrome.storage.sync.set({"listOfGroup": this.listOfGroup}, function () {
+      chrome.storage.local.set({"listOfGroup": this.listOfGroup}, function () {
         console.log('The storage was updated.');
       });
     }

@@ -1,4 +1,4 @@
-# pages
+# chrome窗口管理插件
 
 ## Project setup
 ```

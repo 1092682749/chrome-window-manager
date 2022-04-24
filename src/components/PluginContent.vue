@@ -17,7 +17,7 @@
 
         <div slot="content">
           <!--   一键恢复     -->
-          <Button type="text" @click="recover(group)">回复所有窗口</Button><br/>
+          <Button type="text" @click="recover(group)">恢复所有窗口</Button><br/>
           <div v-for="item in group.list" :key="item">
             <img style="width: 20px; height:20px" :src="item.favIconUrl"/>
             <a target="_blank" :href="item.url" :key="item.url" >{{ item.title }}</a>

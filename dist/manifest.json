@@ -1,6 +1,6 @@
 {
   "name": "window manager",
-  "version": "1.0",
+  "version": "1.5",
   "description": "快捷管理你的tabs",
   "permissions": ["declarativeContent", "storage", "tabs", "unlimitedStorage"],
   "background": {
